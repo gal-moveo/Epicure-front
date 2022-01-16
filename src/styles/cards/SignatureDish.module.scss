@@ -1,0 +1,88 @@
+@import "../helpers/mixins";
+
+@media (max-width: 700px) {
+  .container {
+    // @include flexCenter();
+    // flex-direction: column;
+    // overflow: scroll;
+    width: 100%;
+    margin-top: 20%;
+  }
+
+  .container-slider{
+    width: 100%;
+  }
+    .slider{
+  }
+
+  .header-container {
+    @include flexCenter();
+    // margin-bottom: 2%;
+    // margin-top: 4%;
+  }
+  .header {
+    width: 300px;
+    height: 22px;
+    // margin: 51px 37px 0px 38px;
+    // font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: 0.93px;
+    text-align: center;
+  }
+  .card-container {
+  //   overflow: auto;
+  //   display: flex;
+  width: 100vw;
+  }
+  .cards {
+    display: flex;
+    // display: inline-flex;
+  }
+}
+// ----------------Desktop
+
+@media (min-width: 700px) {
+  .container {
+    @include flexCenter();
+    flex-direction: column;
+  }
+  .container-slider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .slider{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .header-container {
+    @include flexCenter();
+
+    margin-top: 4%;
+  }
+  .header {
+    height: 40px;
+    // margin: 140px 0 42px 0;
+    // font-family: HelveticaNeue;
+    font-size: 30px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 1.25px;
+    text-align: center;
+  }
+   
+  .cards {
+    @include flexCenter();
+  }
+
+}

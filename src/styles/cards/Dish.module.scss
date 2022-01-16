@@ -1,0 +1,193 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+.main_div_ {
+  margin: 1.5%;
+  background-color: $card-color;
+  width: 260px;
+  height: 560px;
+}
+.img_div {
+  img {
+    width: 100%;
+  }
+}
+.header-container {
+  background-color: white;
+  font-family: HelveticaNeue;
+  @include flexCenter();
+
+}
+
+.headers {
+  @include flexCenter();
+  flex-direction: column;
+}
+.details_div {
+  h1 {
+    margin-top: 11px;
+    margin-bottom: 14px;
+    width: 144.7px;
+        font-family: HelveticaNeue;
+    font-size: 27.6px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: 1.84px;
+    text-align: center;
+  }
+  h2 {
+    height: 83px;
+    margin: 0 10px 13px 10px;
+    
+    font-size: 17.3px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 1.15px;
+    text-align: center;
+  }
+}
+
+.details_img_type {
+  @include flexCenter();
+  height: 30px;
+  img {
+    width: 39px;
+    height: 30px;
+  }
+}
+
+.price {
+  @include flexCenter();
+  .Line_L {
+    width: 75px;
+    height: 0px;
+    margin: 17px 9.3px 10px 0;
+    border: solid 0.2px #b3b3b38c;
+  }
+  .Line_R {
+    width: 75px;
+    height: 0px;
+    margin: 17px 0 10px 3.7px;
+    border: solid 0.2px #b3b3b38c;
+  }
+  img {
+    width: 15px;
+    height: 11px;
+    object-fit: contain;
+  }
+  span {
+    width: 32px;
+    height: 29px;
+  
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.67px;
+  }
+}
+// -----------------------DESKTOP
+@media (min-width: 700px) {
+  .main_div_ {
+    margin: 8px;
+    background-color: $card-color;
+    width: 360px;
+    height: 730px;
+  }
+  .img_div {
+    img {
+      width: 100%;
+    }
+  }
+  .header-container {
+    background-color: white;
+    @include flexCenter();
+    h1 {
+     
+      font-size: 30px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.77px;
+      text-align: center;
+    }
+  }
+
+  .headers {
+    @include flexCenter();
+    flex-direction: column;
+  }
+  .details_div {
+    h1 {
+      width: 201px;
+      font-family: HelveticaNeue;
+      font-size: 38.4px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.23;
+      letter-spacing: 2.56px;
+      text-align: center;
+    }
+    h2 {
+      width: 291.5px;
+      height: 154.8px;
+      
+      font-size: 24px;
+      font-weight: 100;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: 1.6px;
+      text-align: center;
+    }
+  }
+
+  .details_img_type {
+    @include flexCenter();
+    img {
+      width: 39px;
+      height: 30px;
+    }
+  }
+
+  .price {
+    @include flexCenter();
+    .Line_L {
+     width: 112px;
+      height: 0px;
+      // margin: 17px 0 10px 3.7px;
+      border: solid 0.2px #b3b3b38c;
+    }
+    .Line_R {
+      width: 112px;
+      height: 0px;
+      // margin: 17px 0 10px 3.7px;
+      border: solid 0.2px #b3b3b38c;
+    }
+    img {
+      width: 15px;
+      height: 11px;
+      object-fit: contain;
+    }
+    span {
+      width: 32px;
+      height: 29px;
+      // font-family: HelveticaNeue;
+      font-size: 25px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.67px;
+      margin: 3px;
+    }
+  }
+  .All-Restaurants {
+  }
+}

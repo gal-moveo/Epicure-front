@@ -1,0 +1,151 @@
+@import "../helpers/mixins";
+.container {
+  @include flexCenter();
+  flex-direction: column;
+  margin: 70px auto 0;
+  opacity: 0.9;
+  background-color: #ffffff;
+  .Paragraph {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    // font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.93px;
+    text-align: center;
+  }
+  .chef-restaurants-container {
+    width: 100%;
+  }
+
+  .chef-restaurants-p{
+    margin-left: 12px;
+    width: 273px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 1.29px;
+  }
+}
+.chef-photo-and-details {
+  @include flexCenter();
+  flex-direction: column;
+  border: none;
+
+  .photo-and-header-name {
+    img {
+      width: 334px;
+      height: 239.4px;
+      margin: 0 0.9px 0.5px 0;
+      object-fit: contain;
+    }
+    .name-header {
+      @include flexCenter();
+      position: relative;
+      top: -54px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.8);
+      font-family: HelveticaNeue;
+      font-size: 30px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.07px;
+      text-align: center;
+    }
+  }
+
+  span {
+  position: relative;
+      top: -30px;
+    margin: 0px 24px 10px 26px;
+    // font-family: HelveticaNeue;
+    font-size: 13.5px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.04px;
+    text-align: center;
+  }
+}
+
+//desktop
+@media (min-width: 700px) {
+  .container {
+    margin: 70px auto 0;
+    max-width: 1050px;
+    span {
+      // margin-top: 1%;
+      // margin-bottom: 1%;
+      // font-size: 30px;
+    }
+    .Paragraph {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    // font-family: HelveticaNeue;
+    font-size: 40px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.93px;
+    text-align: center;
+  }
+    .chef-restaurants-container {
+      width: 100%;
+    }
+    .chef-restaurants-span-container {
+      // @include flexCenter;
+    }
+    .chef-restaurants-span {
+      // margin-left: 13%;
+      padding: 0;
+      height: 30px;
+      font-size: 30px;
+      font-weight: 100;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 1.29px;
+    }
+  }
+   
+  .chef-photo-and-details {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    // margin: 30px 180px 0 200px;
+    .photo-and-header-name {
+      img {
+        width: 433px;
+        height: 338px;
+      }
+      .name-header {
+        font-size: 40px;
+        @include flexCenter();
+        position: relative;
+        top: -90px;
+        height: 78px;
+      }
+    }
+
+    span {
+      // margin: 21px 24px 10px 26px;
+      // font-family: HelveticaNeue;
+      margin-top: 40px;
+      width: 540px;
+      height: 292px;
+      font-size: 23px;
+      margin-bottom: 80px;
+      text-align: left;
+    }
+  }
+}

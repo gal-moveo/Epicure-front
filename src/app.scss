@@ -1,0 +1,74 @@
+
+
+
+// .node-appear {
+//   opacity: 0;
+// }
+// .node-appear-active {
+//   opacity: 1;
+//   transition: opacity 3000ms;
+// }
+// .node-exit {
+//   opacity: 1;
+// }
+// .node-exit-active {
+//   opacity: 0;
+//   transition: opacity 3000ms;
+// }
+
+
+
+.node-enter {
+  opacity: 0;
+}
+.node-enter-active {
+  opacity: 1;
+  transition: opacity 3000ms ease-in;
+  background-color: yellowgreen;
+}
+
+
+// .node-exit {    
+//     opacity: 0;
+//     background-color: yellowgreen;
+//   }
+// .node-exit-active {
+//     opacity: 1;
+//     transition: opacity 3000ms ease-in;
+//   }
+
+
+
+// .App {
+//   height: 100%;
+
+//   // Fade effects
+//   .fade-enter {
+//     opacity: 0.01;
+//   }
+
+//   .fade-enter.fade-enter-active {
+//     opacity: 1;
+//     transition: opacity 7000ms ease-in;
+//   }
+
+//   .fade-exit {
+//     opacity: 1;
+//   }
+
+//   .fade-exit.fade-exit-active {
+//     opacity: 0.01;
+//     transition: opacity 7000ms ease-in;
+//   }
+
+//   div.transition-group {
+//     position: relative;
+//   }
+
+//   section.route-section {
+//     position: absolute;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//   }
+// }

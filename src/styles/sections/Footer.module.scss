@@ -1,0 +1,97 @@
+@import "../helpers/mixins";
+footer {
+  background-color: white;
+  @include flexCenter();
+  flex-direction: column;
+
+  height: 126px;
+  margin: 23px 0px 0 0;
+  padding: 1px 0 23px;
+
+  .contact-us {
+    margin: 23px;
+    // font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.76px;
+    text-align: center;
+    color: var(--black);
+  }
+
+  .term-of-use {
+    margin-bottom: 23px;
+    // font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.76px;
+    text-align: center;
+    color: var(--black);
+  }
+
+  .privacy-policy {
+    margin-bottom: 23px;
+    // font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.76px;
+    text-align: center;
+    color: var(--black);
+  }
+}
+
+// --------desktop
+
+@media (min-width: 700px) {
+  footer {
+    flex-direction: row;
+
+    height: 94px;
+    // margin: 1px 0 5px;
+    // padding: 37px 539px 11px 175px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 -1px 1px -1px rgba(0, 0, 0, 0.15);
+
+    .contact-us {
+      margin: 0 0 0 45px;
+      // font-family: HelveticaNeue;
+      font-size: 18px;
+      font-weight: 100;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.13px;
+    }
+
+    .term-of-use {
+      margin: 0 45px;
+      // font-family: HelveticaNeue;
+      font-size: 18px;
+      font-weight: 100;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.13px;
+    }
+
+    .privacy-policy {
+      margin: 0 45px 0 0;
+      // font-family: HelveticaNeue;
+      font-size: 18px;
+      font-weight: 100;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.13px;
+    }
+  }
+}

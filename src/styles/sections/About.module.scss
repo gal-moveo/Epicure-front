@@ -1,0 +1,224 @@
+@import "../helpers/mixins";
+.container {
+  @include flexCenter();
+  flex-direction: column;
+  height: 605px;
+  opacity: 0.9;
+  background-color: #e6e6e6;
+  margin-top: 20%;
+  .Paragraph {
+    margin-top: 10px;
+    // font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.88px;
+    text-align: center;
+  }
+  .details {
+    text-align: center;
+    width: 304px;
+    height: 259px;
+    margin: 7px 0 0 0;
+    // font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    text-align: center;
+    color: black;
+  }
+  .logo {
+    img {
+      width: 137px;
+      height: 128px;
+      margin: 32px 83px 34px 84px;
+      object-fit: contain;
+    }
+  }
+}
+.store {
+  @include flexCenter();
+  div {
+    @include flexCenter();
+    margin: 10px;
+    width: 127px;
+    height: 37px;
+    // padding: 5.6px 7.9px 5.1px 7.3px;
+    border-radius: 6.7px;
+    border: solid 0.5px black;
+    img {
+      width: 17px;
+      height: 22px;
+      margin: 0px 0px 0px 10px;
+      padding: 0;
+      margin: 0;
+      object-fit: contain;
+    }
+    span {
+      @include flexCenter();
+      flex-direction: column;
+      margin: 10px 0 10px 0;
+      .span-google {
+        margin: 0 0 0 20px;
+      }
+      span {
+        // font-family: HelveticaNeue;
+        padding: 0;
+        margin: 0;
+        font-size: 11px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-align: center;
+      }
+      .span-2 {
+        font-size: 9.2px;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    margin-top: 0;
+  }
+}
+
+//-------------desktop
+@media (min-width: 700px) {
+  .container {
+    height: 526px;
+    width: 100%;
+    .details-and-logo {
+      width: 70%;
+      // margin: 1% auto 1%;
+      // background-color: rgb(223, 125, 6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .Paragraphs {
+        // background-color: aqua;
+        .Paragraph {
+          font-size: 30px;
+          text-align: justify;
+        }
+        .details {
+          width: 567px;
+          height: 135px;
+          font-size: 22px;
+          text-align: justify;
+          margin-bottom: 5%;
+        }
+      }
+      .logo {
+        width: 195px;
+        height: 182px;
+        margin-right: 10%;
+      }
+    }
+    .store-container {
+      width: 100%;
+      display: flex;
+      margin-left: 29%;
+      .store {
+        flex: none;
+      }
+    }
+  }
+}
+//   .container {
+//     @include flexCenter();
+//     flex-direction: column;
+//     height: 526px;
+//     margin: 117px 0 0 0;
+//     padding: 65px 0 0 0;
+//     opacity: 0.9;
+//     background-color: #e6e6e6;
+//     .details {
+//       width: 567px;
+//       height: 269px;
+//       margin: 0px 600px 23px 35px;
+//       // font-family: HelveticaNeue;
+//       font-size: 22px;
+//       font-weight: 100;
+//       font-stretch: normal;
+//       font-style: normal;
+//       line-height: normal;
+//       letter-spacing: 1.69px;
+//       text-align: left;
+//     }
+//     span {
+//       width: 182px;
+//       height: 35px;
+//       margin: 0 1000px 20px 35px;
+//       //font-family: HelveticaNeue;
+//       font-size: 28px;
+//       font-weight: 100;
+//       font-stretch: normal;
+//       font-style: normal;
+//       line-height: normal;
+//       letter-spacing: 1.89px;
+//       text-align: center;
+//     }
+//     .logo {
+//       img {
+//         // position: absolute;
+//         // width: 137px;
+//         // height: 128px;
+//         // margin: 32px 83px 34px 84px;
+//         // object-fit: contain;
+//         // display: none;
+//       }
+//     }
+//   }
+//   .store {
+//     @include flexCenter();
+//     div {
+//       @include flexCenter();
+//       // margin: 10px;
+//       // width: 127px;
+//       // height: 37px;
+//       // padding: 5.6px 7.9px 5.1px 7.3px;
+//       border-radius: 6.7px;
+//       border: solid 0.5px black;
+//       img {
+//         // width: 17px;
+//         // height: 22px;
+//         // margin: 0px 0px 0px 10px;
+//         // padding: 0;
+//         // margin: 0;
+//         // object-fit: contain;
+//       }
+//       span {
+//         @include flexCenter();
+//         flex-direction: column;
+//         // margin: 10px 0 10px 0;
+//         .span-google {
+//           // margin: 0 0 0 20px;
+//         }
+//         span {
+//           // font-family: HelveticaNeue;
+//           // padding: 0;
+//           // margin: 0;
+//           // font-size: 11px;
+//           // font-weight: normal;
+//           // font-stretch: normal;
+//           // font-style: normal;
+//           // line-height: normal;
+//           // letter-spacing: 0.9px;
+//           // text-align: center;
+//         }
+//         .span-2 {
+//           // font-size: 9.2px;
+//         }
+//       }
+//     }
+//   }
+// }

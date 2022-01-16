@@ -1,0 +1,27 @@
+
+.fade-appear{
+  opacity: 0;
+  /* z-index: 1; */
+}
+.fade-appear-active{
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+
+.node-appear {
+  opacity: 0;
+}
+.node-appear-active {
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+.node-exit {
+  opacity: 1;
+}
+.node-exit-active {
+  opacity: 0;
+  transition: opacity 2000ms;
+}
+
+
