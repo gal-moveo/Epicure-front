@@ -15,7 +15,6 @@
   background-color: white;
   font-family: HelveticaNeue;
   @include flexCenter();
-
 }
 
 .headers {
@@ -27,7 +26,7 @@
     margin-top: 11px;
     margin-bottom: 14px;
     width: 144.7px;
-        font-family: HelveticaNeue;
+    font-family: HelveticaNeue;
     font-size: 27.6px;
     font-weight: normal;
     font-stretch: normal;
@@ -39,7 +38,7 @@
   h2 {
     height: 83px;
     margin: 0 10px 13px 10px;
-    
+
     font-size: 17.3px;
     font-weight: 100;
     font-stretch: normal;
@@ -81,7 +80,7 @@
   span {
     width: 32px;
     height: 29px;
-  
+
     font-size: 25px;
     font-weight: normal;
     font-stretch: normal;
@@ -107,7 +106,6 @@
     background-color: white;
     @include flexCenter();
     h1 {
-     
       font-size: 30px;
       font-weight: normal;
       font-stretch: normal;
@@ -137,7 +135,7 @@
     h2 {
       width: 291.5px;
       height: 154.8px;
-      
+
       font-size: 24px;
       font-weight: 100;
       font-stretch: normal;
@@ -158,8 +156,10 @@
 
   .price {
     @include flexCenter();
+    width: 100%;
+
     .Line_L {
-     width: 112px;
+      width: 112px;
       height: 0px;
       // margin: 17px 0 10px 3.7px;
       border: solid 0.2px #b3b3b38c;
@@ -170,9 +170,13 @@
       // margin: 17px 0 10px 3.7px;
       border: solid 0.2px #b3b3b38c;
     }
+    .priceAndImg {
+      @include flexCenter();
+      // font-family: HelveticaNeue;
+    }
     img {
-      width: 15px;
-      height: 11px;
+      width: 20px;
+      height: 15px;
       object-fit: contain;
     }
     span {

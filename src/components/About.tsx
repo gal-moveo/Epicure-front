@@ -7,19 +7,16 @@ const About: React.FC = () => {
         <div className={styles.Paragraphs}>
           <p className={styles.Paragraph}>ABOUT US :</p>
           <p className={styles.details}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing<br></br> elit. In
-            a lacus vel justo fermentum bibendum non<br></br>eu ipsum. Cras
-            porta malesuada eros, eget blandit<br></br> turpis suscipit at.
-            Vestibulum sed massa in magna<br></br> sodales porta. Vivamus elit
-            urna,<br></br> dignissim a vestibulum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
+            vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
+            eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
+            sodales porta. Vivamus elit urna, dignissim a vestibulum.
           </p>
-          <br></br>
           <p className={styles.details}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br> In
-            a lacus vel justo fermentum bibendum non eu ipsum. Cras porta
-            malesuada eros, eget blandit turpis suscipit at. Vestibulum sed
-            massa in magna sodales porta. Vivamus elit urna, dignissim a
-            vestibulum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
+            vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
+            eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
+            sodales porta. Vivamus elit urna, dignissim a vestibulum.
           </p>
         </div>
 

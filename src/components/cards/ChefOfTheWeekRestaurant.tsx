@@ -1,7 +1,8 @@
 import styles from "../../styles/cards/ChefOfTheWeekRestaurant.module.scss"
-//import "../../assets/img/rectangle/rectangle@3x.png"
-
-const ChefOfTheWeekRestaurant: React.FC<{resName:string,img:string}> = (props) => {
+const ChefOfTheWeekRestaurant: React.FC<{
+  resName: string | undefined
+  img: string
+}> = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.img_div}>
@@ -18,5 +19,4 @@ const ChefOfTheWeekRestaurant: React.FC<{resName:string,img:string}> = (props) =
     </div>
   )
 }
-
 export default ChefOfTheWeekRestaurant

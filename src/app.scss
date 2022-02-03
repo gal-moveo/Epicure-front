@@ -1,6 +1,3 @@
-
-
-
 // .node-appear {
 //   opacity: 0;
 // }
@@ -16,19 +13,18 @@
 //   transition: opacity 3000ms;
 // }
 
-
+.App {
+}
 
 .node-enter {
   opacity: 0;
 }
 .node-enter-active {
   opacity: 1;
-  transition: opacity 3000ms ease-in;
-  background-color: yellowgreen;
+  transition: opacity 500ms ease-in;
 }
 
-
-// .node-exit {    
+// .node-exit {
 //     opacity: 0;
 //     background-color: yellowgreen;
 //   }
@@ -36,8 +32,6 @@
 //     opacity: 1;
 //     transition: opacity 3000ms ease-in;
 //   }
-
-
 
 // .App {
 //   height: 100%;

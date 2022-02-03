@@ -1,8 +1,8 @@
 @import "../helpers/mixins";
-@import '../helpers/variables';
+@import "../helpers/variables";
 .container {
   margin: 5px;
-  background-color:  $card-color;
+  background-color: $card-color;
   width: 153px;
   height: 237px;
 }
@@ -37,7 +37,7 @@
 @media (min-width: 700px) {
   .container {
     margin: 8px;
-    background-color:  $card-color;
+    background-color: $card-color;
     width: 231px;
     height: 340px;
   }

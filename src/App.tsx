@@ -3,21 +3,19 @@ import About from "./components/About"
 import Footer from "./components/Footer"
 import "./styles/global.scss"
 import Home from "./components/sectionsHome/Home"
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom"
 import Restaurants from "./components/Restaurants"
 import Chef from "./components/Chefs"
-import './app.scss'
+import "./app.scss"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-//import { isMobile } from 'react-device-detect';
+// import { isMobile } from "react-device-detect"
+// import Slider from "react-slick"
 import User from "./components/User"
-import { useEffect } from "react"
-
-
 function App() {
   const location = useLocation()
   var desktop = false
   const routes = (
-    < Routes location={location} >
+    <Routes location={location}>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="Restaurants" element={<Restaurants />} />
@@ -32,16 +30,22 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      {desktop ? routes :
-        <TransitionGroup >
-          <CSSTransition classNames="node" timeout={{ enter: 3000 }} key={location.key}>
+      {desktop ? (
+        routes
+      ) : (
+        <TransitionGroup>
+          <CSSTransition
+            classNames="node"
+            timeout={{ enter: 3000 }}
+            key={location.key}
+          >
             {routes}
           </CSSTransition>
-        </TransitionGroup>}
+        </TransitionGroup>
+      )}
       <About></About>
       <Footer></Footer>
     </div>
   )
 }
-
 export default App

@@ -12,9 +12,7 @@ const data = [
   {
     title: "Kab Kem",
     dishName: "Garbanzo Frito",
-    dishInfo: `Polenta fingers, veal cheek,
-                magic chili cured lemon
-                 cream, yellow laksa`,
+    dishInfo: `Polenta fingers, veal cheek,magic chili cured lemoncream, yellow laksa`,
     img: "rectangle@3x.png",
     price: "98",
     type: null,
@@ -114,7 +112,7 @@ const data = [
 ]
 export default data
 //my-app/src/assets/img/allDish/rectangle@2x.png 1
-//my-app/src/assets/img/allDish/rectangle@3x.png 
+//my-app/src/assets/img/allDish/rectangle@3x.png
 //my-app/src/assets/img/allDish/rectangle@3x11.png
 
 //my-app/src/assets/icons/types/group-7-copy@3x.png

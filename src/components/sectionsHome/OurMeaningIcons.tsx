@@ -27,6 +27,4 @@ const OurMeaningIcons: React.FC = () => {
     </div>
   )
 }
-//my-app/src/assets/icons/types/group-7-copy@3x.png
-//my-app/src/assets/icons/types/spicy-icon@3x.png
 export default OurMeaningIcons

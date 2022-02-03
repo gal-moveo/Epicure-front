@@ -3,7 +3,7 @@ import Bag from "./svgs/Bag"
 import HamburgerMenu from "./svgs/HamburgerMenu"
 import User from "./svgs/User"
 import Search from "./svgs/Search"
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 const NavBar: React.FC = () => {
   return (
     <section className={styles.container}>
@@ -20,16 +20,20 @@ const NavBar: React.FC = () => {
         <Link to="/">
           <header className={styles.EPICURE}>EPICURE</header>
         </Link>
-        <Link to="/Restaurants"
-        // style={isActive => ({
-        //   color: isActive ? "green" : "blue"
-        // })}
+        <Link
+          to="/Restaurants"
+          // style={isActive => ({
+          //   color: isActive ? "green" : "blue"
+          // })}
         >
           <header className={styles.Restaurants}>Restaurants</header>
         </Link>
-        <Link to="/Chef" >
+        <Link to="/Chef">
           <header className={styles.Chefs}>Chefs</header>
         </Link>
+        <a href="http://localhost:4200">
+          <header className={styles.Restaurants}>admin</header>
+        </a>
       </div>
       <div className={styles["right-side"]}>
         <div className={styles["input-container"]}>

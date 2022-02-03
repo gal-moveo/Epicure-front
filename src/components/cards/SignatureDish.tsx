@@ -1,14 +1,25 @@
 import styles from "../../styles/cards/SignatureDish.module.scss"
 import Dish from "./Dish"
-import data from "../../data/SignatureDish"
-import Carousel from 'react-elastic-carousel'
 import Slider from "react-slick"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useState } from 'react';
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import { useEffect, useState } from "react"
 import { settingsDish } from "../sliderSettings"
+import axios from "axios"
+import { ISignatureDish } from "../../interfaces/ISignatureDish"
 
 const SignatureDish: React.FC = () => {
+  const [signatureDish, setSignatureDish] = useState<[ISignatureDish] | []>([])
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/dishes/getAllSignatureDishes")
+      .then(function (response) {
+        setSignatureDish(response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  }, [])
   return (
     <>
       <div className={styles.container}>
@@ -19,15 +30,18 @@ const SignatureDish: React.FC = () => {
       <div className={styles["container-slider"]}>
         <div className={styles.slider}>
           <Slider {...settingsDish} className={styles.slider}>
-            {data.map(d => {
-              return (<Dish
-                title={d.title}
-                dishName={d.dishName}
-                dishInfo={d.dishInfo}
-                price={d.price}
-                img={d.img}
-                type={d.type}
-              ></Dish>)
+            {signatureDish.map((dish) => {
+              return (
+                <Dish
+                  title={dish.restaurantName}
+                  dishName={dish.name}
+                  dishInfo={dish.description}
+                  price={dish.price.toString()}
+                  img={dish.imgUrl}
+                  type={dish.icon.type}
+                  urlIcon={dish.icon.imgUrl}
+                ></Dish>
+              )
             })}
           </Slider>
         </div>
@@ -35,51 +49,5 @@ const SignatureDish: React.FC = () => {
     </>
   )
 }
+
 export default SignatureDish
-//signature dish
-/* 
- <Slider {...settings} className={styles.slider}>
-  <Carousel itemsToShow={itemsToShowBeSize} className={styles.Carousel}>
-
-    <Carousel itemsToShow={1}>
-            {data.map(d => {
-              return (<Dish
-                title={d.title}
-                dishName={d.dishName}
-                dishInfo={d.dishInfo}
-                price={d.price}
-                img={d.img}
-                type={d.type}
-              ></Dish>)
-            })}
-          </Carousel>
-
-
-
-
-
-
-             <div className={styles.container}>
-      <div className={styles["header-container"]}>
-        <span className={styles.header}>SIGNATURE DISH OF :</span>
-      </div>
-      <div className={styles["card-container"]}>
-        <div className={styles.cards}>
-      
-        </div>
-      </div>
-    </div>
-
-
-  className={`${styles["flex"]} ${styles["justify-center"]}`}
-  
-  <div style={{width:'100%'}}>
-    <span>text</span>
-    <div style={{ overflowX: 'auto' }}>
-      <div>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </div>
-    </div>
-  </div> */

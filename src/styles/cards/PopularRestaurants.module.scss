@@ -1,6 +1,7 @@
 @import "../helpers/mixins";
-@media screen and (max-width: 900px) and (min-width: 200px){
-  .Slider____{
+
+@media screen and (max-width: 900px) and (min-width: 200px) {
+  .Slider____ {
     width: 100px;
     background-color: yellowgreen;
   }
@@ -14,19 +15,18 @@
     width: 100vw;
   }
 
-  .container-slider{
+  .container-slider {
     width: 100%;
   }
-  .slider{
+  .slider {
   }
-
 
   .header-container {
     @include flexCenter();
     span {
       margin-bottom: 2%;
     }
-  }  
+  }
   .header {
     width: 300px;
     height: 22px;
@@ -51,7 +51,7 @@
   .All-Restaurants {
     display: none;
     span {
-    display: none;
+      display: none;
     }
   }
 }
@@ -62,13 +62,13 @@
     flex-direction: column;
     margin-top: 10%;
   }
-  .container-slider{
+  .container-slider {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-    .slider{
+  .slider {
     width: 90%;
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@
   .All-Restaurants {
     position: absolute;
     right: 11%;
-    
+
     span {
       width: 233px;
       height: 35px;

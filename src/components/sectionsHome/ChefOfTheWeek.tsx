@@ -1,27 +1,38 @@
 import styles from "../../styles/sections/ChefOfTheWeek.module.scss"
-import ChefOfTheWeekRestaurant from "../cards/ChefOfTheWeekRestaurant"
 import ChefOfTheWeekRestaurants from "../cards/ChefOfTheWeekRestaurants"
-import Dish from "../cards/Dish"
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { IChef } from "../../interfaces/IChef"
 
+const a = "../../assets/img/chefOfTheWeek/"
 const ChefOfTheWeek: React.FC = () => {
+  const [weeklyChef, setWeeklyChef] = useState<IChef>()
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/chefs/getWeeklyChef")
+      .then(function (response) {
+        setWeeklyChef(response.data[0].chef[0])
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  }, [])
   return (
     <>
       <div className={styles.container}>
         <p className={styles.Paragraph}>CHEF OF THE WEEK :</p>
         <div className={styles["chef-photo-and-details"]}>
           <div className={styles["photo-and-header-name"]}>
-            <img
-              src={require("../../assets/img/chefOfTheWeek/rectangle@2x.png")}
-            ></img>
-            <div className={styles["name-header"]}>Yossi Shitrit</div>
+            {weeklyChef?.imgUrl && (
+              <img
+                src={require(`../../assets/img/chefOfTheWeek/${weeklyChef?.imgUrl}`)}
+              />
+            )}
+            <div
+              className={styles["name-header"]}
+            >{`${weeklyChef?.firstName} ${weeklyChef?.lastName}`}</div>
           </div>
-          <span>
-            Chef Yossi Shitrit has been living and breathing his culinary dreams
-            for more than two decades, including running the kitchen in his
-            first restaurant, the fondly-remembered Violet, located in Moshav
-            Udim. Shitrit's creativity and culinary acumen born of long
-            experience are expressed in the every detail of each and every dish.
-          </span>
+          <span>{weeklyChef?.description}</span>
         </div>
         <div className={styles["chef-restaurants-container"]}>
           <div className={styles["chef-restaurants-span-container"]}>
@@ -29,7 +40,9 @@ const ChefOfTheWeek: React.FC = () => {
               Yossi’s restaurants :
             </p>
           </div>
-          <ChefOfTheWeekRestaurants></ChefOfTheWeekRestaurants>
+          <ChefOfTheWeekRestaurants
+            chefId={`${weeklyChef?._id}`}
+          ></ChefOfTheWeekRestaurants>
         </div>
       </div>
     </>
@@ -37,10 +50,5 @@ const ChefOfTheWeek: React.FC = () => {
 }
 
 export default ChefOfTheWeek
-//Restaurants
-/**
- *
- * style={{ overflowX: "auto" }}
- *
- *
- */
+
+//style={{ overflowX: "auto" }}

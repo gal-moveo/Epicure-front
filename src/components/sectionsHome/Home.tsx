@@ -6,15 +6,15 @@ import HeroSearch from "./HeroSearch"
 import OurMeaningIcons from "./OurMeaningIcons"
 
 const Home: React.FC = () => {
-    return (
-        <div className="home">
-            <HeroSearch></HeroSearch>
-            <ButtonsMobileOnly></ButtonsMobileOnly>
-            <PopularRestaurants></PopularRestaurants>
-            <SignatureDish></SignatureDish>
-            <OurMeaningIcons></OurMeaningIcons>
-            <ChefOfTheWeek></ChefOfTheWeek>
-        </div>
-    )
+  return (
+    <div className="home">
+      <HeroSearch></HeroSearch>
+      <ButtonsMobileOnly></ButtonsMobileOnly>
+      <PopularRestaurants></PopularRestaurants>
+      <SignatureDish></SignatureDish>
+      <OurMeaningIcons></OurMeaningIcons>
+      <ChefOfTheWeek></ChefOfTheWeek>
+    </div>
+  )
 }
 export default Home
